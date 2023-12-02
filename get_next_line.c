@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:48:41 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/24 13:07:11 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/12/02 20:27:13 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ crear solo una variable estática
 
 char	*get_next_line(int fd)
 {
-	char	*str;
+	static char	*str;
 
 	str = read_line(); //lee una linea y devuelve esa linea leida
 					   //tener en cuenta stdin y file

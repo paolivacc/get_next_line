@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:20:27 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/24 11:40:28 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/12/01 11:37:53 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd,h>
 
 /**
- * @brief Read a line from the file fd and returns it.
+ * @brief Read a line from fd file and returns it.
  * @param fd file descriptor to read from.
  * @return the line read.
  */
