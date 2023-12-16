@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:48:41 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/12/16 02:19:53 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/12/16 02:19:20 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static int	save_info_read(int fd, char **save_bytes)
 {
@@ -76,16 +76,16 @@ static char	*update_bytes_read(char *save_bytes, int index)
 
 char	*get_next_line(int fd)
 {
-	static char	*save_bytes;
+	static char	*save_bytes[256];
 	char		*line;
 	int			index;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	index = save_info_read(fd, &save_bytes);
-	if (!save_bytes)
+	index = save_info_read(fd, &save_bytes[fd]);
+	if (!save_bytes[fd])
 		return (NULL);
-	line = save_line(save_bytes, index);
-	save_bytes = update_bytes_read(save_bytes, index);
+	line = save_line(save_bytes[fd], index);
+	save_bytes[fd] = update_bytes_read(save_bytes[fd], index);
 	return (line);
 }

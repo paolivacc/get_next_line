@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:20:27 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/12/16 01:51:04 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/12/16 02:15:42 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -48,4 +48,4 @@ int		ft_strchr_index(const char *s, int c);
  */
 char	*ft_strjoin_pro(char *s1, char *s2);
 
-#endif /*GET_NEXT_LINE_H*/
+#endif /*GET_NEXT_LINE_BONUS_H*/
